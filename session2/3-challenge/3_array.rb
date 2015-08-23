@@ -7,6 +7,13 @@
 
 class String
   def every_other_char
+  	to_return = ""
+    self.size.times do |index|
+      next if index.odd?
+      to_return << self[index]
+	end
+	to_return
   end
-  
 end
+
+puts "abcdefg".every_other_char 

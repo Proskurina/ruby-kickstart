@@ -15,3 +15,10 @@
 # prime_chars? ['a', 'bcd']       # => false
 # prime_chars? ['a', 'b', 'cd']   # => false
 
+def prime_chars? array
+	length = array.join.length
+	remainders = (2..length/2).select{|n| length%n==0}
+	remainders.empty? ? true : false
+end
+
+puts prime_chars? ['a', 'b', 'c']
